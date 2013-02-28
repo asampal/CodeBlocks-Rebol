@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="r3" />
+		<Option platforms="Windows;" />
+		<Option makefile="makefile" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="./make" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<MakeCommands>
+			<Build command="$make -j -f $makefile all$target" />
+			<CompileFile command="$make -f $makefile $file" />
+			<Clean command="$make -f $makefile clean" />
+			<DistClean command="$make -f $makefile distclean$target" />
+			<AskRebuildNeeded command="$make -q -f $makefile all$target" />
+			<SilentBuild command="$make -j -f $makefile all$target &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Windows;" />
+				<Option output="make/r3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="make/objs/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option platforms="Windows;" />
+				<Option output="make/r3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="make/objs/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<ExtraCommands>
+			<Add before="r3-make ../src/tools/make-make.r 0.3.1 &gt;NUL" />
+		</ExtraCommands>
+		<Unit filename="make/makefile" />
+		<Unit filename="src/boot/actions.r" />
+		<Unit filename="src/boot/boot-code.r" />
+		<Unit filename="src/boot/booters.r" />
+		<Unit filename="src/boot/draw.r" />
+		<Unit filename="src/boot/errors.r" />
+		<Unit filename="src/boot/graphics.r" />
+		<Unit filename="src/boot/host-init.r" />
+		<Unit filename="src/boot/modes.r" />
+		<Unit filename="src/boot/natives.r" />
+		<Unit filename="src/boot/ops.r" />
+		<Unit filename="src/boot/platforms.r" />
+		<Unit filename="src/boot/root.r" />
+		<Unit filename="src/boot/shape.r" />
+		<Unit filename="src/boot/strings.r" />
+		<Unit filename="src/boot/sysobj.r" />
+		<Unit filename="src/boot/task.r" />
+		<Unit filename="src/boot/text.r" />
+		<Unit filename="src/boot/types-ext.r" />
+		<Unit filename="src/boot/types.r" />
+		<Unit filename="src/boot/typespec.r" />
+		<Unit filename="src/boot/version.r" />
+		<Unit filename="src/boot/words.r" />
+		<Unit filename="src/core/a-constants.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/a-globals.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/a-lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/a-lib2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/a-stubs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/b-boot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/b-init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/b-main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/c-do.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/c-error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/c-frame.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/c-function.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/c-port.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/c-task.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/c-word.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/d-crash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/d-dump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/d-print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-blocks.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-deci.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-enbase.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-extension.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-math.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-modify.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-random.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-round.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-series.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/f-stubs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/l-scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/l-types.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/m-gc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/m-pools.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/m-series.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-control.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-data.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-graphics.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-loop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-math.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-sets.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-strings.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/n-system.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/p-clipboard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/p-console.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/p-dir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/p-dns.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/p-event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/p-file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/p-net.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/p-timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-cases.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-find.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-make.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-mold.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-ops.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-trim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/s-unicode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-bitset.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-block.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-char.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-datatype.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-date.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-decimal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-function.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-gob.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-integer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-logic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-map.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-money.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-none.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-object.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-pair.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-port.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-tuple.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-typeset.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-utype.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-vector.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/t-word.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-bmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-dialect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-gif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-jpg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-png.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-sha1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/core/u-zlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/include/ext-types.h" />
+		<Unit filename="src/include/host-ext-draw.h" />
+		<Unit filename="src/include/host-ext-graphics.h" />
+		<Unit filename="src/include/host-ext-shape.h" />
+		<Unit filename="src/include/host-ext-text.h" />
+		<Unit filename="src/include/host-init.h" />
+		<Unit filename="src/include/host-lib.h" />
+		<Unit filename="src/include/reb-args.h" />
+		<Unit filename="src/include/reb-c.h" />
+		<Unit filename="src/include/reb-codec.h" />
+		<Unit filename="src/include/reb-config.h" />
+		<Unit filename="src/include/reb-defs.h" />
+		<Unit filename="src/include/reb-device.h" />
+		<Unit filename="src/include/reb-dialect.h" />
+		<Unit filename="src/include/reb-event.h" />
+		<Unit filename="src/include/reb-evtypes.h" />
+		<Unit filename="src/include/reb-ext.h" />
+		<Unit filename="src/include/reb-file.h" />
+		<Unit filename="src/include/reb-filereq.h" />
+		<Unit filename="src/include/reb-gob.h" />
+		<Unit filename="src/include/reb-host.h" />
+		<Unit filename="src/include/reb-lib-lib.h" />
+		<Unit filename="src/include/reb-lib.h" />
+		<Unit filename="src/include/reb-math.h" />
+		<Unit filename="src/include/reb-net.h" />
+		<Unit filename="src/include/reb-series.h" />
+		<Unit filename="src/include/reb-types.h" />
+		<Unit filename="src/include/reb-value.h" />
+		<Unit filename="src/include/sys-core.h" />
+		<Unit filename="src/include/sys-dec-to-char.h" />
+		<Unit filename="src/include/sys-deci-funcs.h" />
+		<Unit filename="src/include/sys-deci.h" />
+		<Unit filename="src/include/sys-globals.h" />
+		<Unit filename="src/include/sys-jpg.h" />
+		<Unit filename="src/include/sys-mem.h" />
+		<Unit filename="src/include/sys-net.h" />
+		<Unit filename="src/include/sys-panics.h" />
+		<Unit filename="src/include/sys-scan.h" />
+		<Unit filename="src/include/sys-stack.h" />
+		<Unit filename="src/include/sys-state.h" />
+		<Unit filename="src/include/sys-system.h" />
+		<Unit filename="src/include/sys-value.h" />
+		<Unit filename="src/include/sys-zlib.h" />
+		<Unit filename="src/include/tmp-boot.h" />
+		<Unit filename="src/include/tmp-bootdefs.h" />
+		<Unit filename="src/include/tmp-comptypes.h" />
+		<Unit filename="src/include/tmp-errnums.h" />
+		<Unit filename="src/include/tmp-evaltypes.h" />
+		<Unit filename="src/include/tmp-exttypes.h" />
+		<Unit filename="src/include/tmp-funcargs.h" />
+		<Unit filename="src/include/tmp-funcs.h" />
+		<Unit filename="src/include/tmp-maketypes.h" />
+		<Unit filename="src/include/tmp-portmodes.h" />
+		<Unit filename="src/include/tmp-strings.h" />
+		<Unit filename="src/include/tmp-sysctx.h" />
+		<Unit filename="src/include/tmp-sysobj.h" />
+		<Unit filename="src/mezz/base-constants.r" />
+		<Unit filename="src/mezz/base-debug.r" />
+		<Unit filename="src/mezz/base-defs.r" />
+		<Unit filename="src/mezz/base-files.r" />
+		<Unit filename="src/mezz/base-funcs.r" />
+		<Unit filename="src/mezz/base-series.r" />
+		<Unit filename="src/mezz/boot-files.r" />
+		<Unit filename="src/mezz/dial-draw.r" />
+		<Unit filename="src/mezz/dial-effect.r" />
+		<Unit filename="src/mezz/dial-text.r" />
+		<Unit filename="src/mezz/mezz-banner.r" />
+		<Unit filename="src/mezz/mezz-colors.r" />
+		<Unit filename="src/mezz/mezz-control.r" />
+		<Unit filename="src/mezz/mezz-debug.r" />
+		<Unit filename="src/mezz/mezz-files.r" />
+		<Unit filename="src/mezz/mezz-func.r" />
+		<Unit filename="src/mezz/mezz-help.r" />
+		<Unit filename="src/mezz/mezz-math.r" />
+		<Unit filename="src/mezz/mezz-save.r" />
+		<Unit filename="src/mezz/mezz-secure.r" />
+		<Unit filename="src/mezz/mezz-series.r" />
+		<Unit filename="src/mezz/mezz-shell.r" />
+		<Unit filename="src/mezz/mezz-tail.r" />
+		<Unit filename="src/mezz/mezz-types.r" />
+		<Unit filename="src/mezz/prot-http.r" />
+		<Unit filename="src/mezz/sys-base.r" />
+		<Unit filename="src/mezz/sys-codec.r" />
+		<Unit filename="src/mezz/sys-load.r" />
+		<Unit filename="src/mezz/sys-ports.r" />
+		<Unit filename="src/mezz/sys-start.r" />
+		<Unit filename="src/mezz/view-funcs.r" />
+		<Unit filename="src/os/dev-dns.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/dev-net.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/host-args.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/host-device.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/host-ext-test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/host-main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/host-stdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/dev-clipboard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/dev-event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/dev-file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/dev-stdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/host-draw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/host-effect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/host-event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/host-graphics.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/host-lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/host-text.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/host-window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/os/win32/rpic-test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/reb-lib-doc.txt" />
+		<Unit filename="src/tools/file-base.r" />
+		<Unit filename="src/tools/form-header.r" />
+		<Unit filename="src/tools/make-boot.r" />
+		<Unit filename="src/tools/make-headers.r" />
+		<Unit filename="src/tools/make-host-ext.r" />
+		<Unit filename="src/tools/make-host-init.r" />
+		<Unit filename="src/tools/make-make.r" />
+		<Unit filename="src/tools/make-os-ext.r" />
+		<Unit filename="src/tools/make-reb-lib.r" />
+		<Unit filename="src/tools/systems.r" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
