@@ -3,7 +3,7 @@ This is a [Code::Blocks](http://codeblocks.org) project file for [Rebol](http://
 
 Instructions:
 
-The project assumes the source layout of the official GitHub Rebol repo and, for now, specifically targets Windows. Put the project file (r3.cbp) at the root of this directory structure, r3-make.exe (a renamed [Rebol executable](http://rebolsource.com) used in some pre-build steps) in the `make` directory and make-make.r in `src/tools` to overwrite the existing one.
+The project assumes the source layout of the official GitHub Rebol repo and, for now, specifically targets Code::Blocks 12.11 on Windows. Put the project file (r3.cbp) at the root of this directory structure, r3-make.exe (a renamed [Rebol executable](http://rebolsource.com) used in some pre-build steps) in the `make` directory and make-make.r in `src/tools` to overwrite the existing one.
 
 The makefile will build an executable that doesn't include graphics support (as does the one from the official GitHub repo). Saphirion has a build that produces an exe with graphics support, but I'm not sure what the differences are relative to the official source. If you want to build with [Saphirion's source](http://development.saphirion.com/downloads/), be aware that make-make.r might need some slight adjustments. You should be able to diff the one included here and theirs in order to figure out what changes need to be made.
 
